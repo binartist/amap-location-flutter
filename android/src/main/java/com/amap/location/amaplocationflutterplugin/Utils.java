@@ -25,8 +25,8 @@ public class Utils {
             if (location.getErrorCode() == AMapLocation.LOCATION_SUCCESS) {
                 result.put("locationTime", formatUTC(location.getTime(), null));
                 result.put("locationType", location.getLocationType());
-                result.put("latitude", location.getLatitude());
-                result.put("longitude", location.getLongitude());
+                result.put("latitude", String.valueOf(location.getLatitude()));
+                result.put("longitude", String.valueOf(location.getLongitude()));
                 result.put("accuracy", location.getAccuracy());
                 result.put("altitude", location.getAltitude());
                 result.put("bearing", location.getBearing());
